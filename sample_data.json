@@ -1,0 +1,154 @@
+{
+  "schemas": [
+    {
+      "name": "store",
+      "description": "Contains data related to customers, orders, and products within the store ecosystem. Use this schema for analyzing customer behavior, order trends, and product performance.",
+      "tables": [
+        {
+          "name": "customer",
+          "description": "Holds information about all registered customers, including contact details and account status.",
+          "columns": [
+            {
+              "name": "CustomerID",
+              "description": "Unique identifier for each customer."
+            },
+            {
+              "name": "CustomerName",
+              "description": "Full name of the customer."
+            },
+            {
+              "name": "Email",
+              "description": "Email address associated with the customer."
+            },
+            {
+              "name": "PhoneNumber",
+              "description": "Contact phone number of the customer."
+            },
+            {
+              "name": "PrimaryAddress",
+              "description": "Main residential or shipping address of the customer."
+            },
+            {
+              "name": "CreatedDate",
+              "description": "Date when the customer record was created."
+            },
+            {
+              "name": "CustomerType",
+              "description": "Category or type of customer, e.g., 'Retail' or 'Wholesale'."
+            },
+            {
+              "name": "IsActive",
+              "description": "Indicates whether the customer account is currently active."
+            }
+          ]
+        },
+        {
+          "name": "orderinfo",
+          "description": "Contains general information about customer orders, including status, payment, and shipping details.",
+          "columns": [
+            {
+              "name": "OrderID",
+              "description": "Unique identifier for each order."
+            },
+            {
+              "name": "CustomerID",
+              "description": "Identifier for the customer who placed the order."
+            },
+            {
+              "name": "OrderDate",
+              "description": "Date when the order was placed."
+            },
+            {
+              "name": "ShippingDate",
+              "description": "Date when the order was shipped."
+            },
+            {
+              "name": "OrderStatus",
+              "description": "Current status of the order, e.g., 'Pending', 'Shipped', or 'Delivered'."
+            },
+            {
+              "name": "TotalAmount",
+              "description": "Total monetary amount for the order."
+            },
+            {
+              "name": "PaymentMethod",
+              "description": "Payment method used for the order, e.g., 'Credit Card' or 'PayPal'."
+            },
+            {
+              "name": "ShippingAddress",
+              "description": "Address where the order is to be delivered."
+            }
+          ]
+        },
+        {
+          "name": "orderdetails",
+          "description": "Contains detailed information about individual items within each order, including product, quantity, and pricing details.",
+          "columns": [
+            {
+              "name": "OrderDetailID",
+              "description": "Unique identifier for each order line item."
+            },
+            {
+              "name": "OrderID",
+              "description": "Identifier linking this record to the main order."
+            },
+            {
+              "name": "ProductID",
+              "description": "Identifier for the product included in this order line."
+            },
+            {
+              "name": "Quantity",
+              "description": "Number of units of the product ordered."
+            },
+            {
+              "name": "UnitPrice",
+              "description": "Price per unit of the product at the time of order."
+            },
+            {
+              "name": "Discount",
+              "description": "Discount applied to this particular line item, if any."
+            },
+            {
+              "name": "LineTotal",
+              "description": "Total amount for this line item after discounts."
+            }
+          ]
+        },
+        {
+          "name": "product",
+          "description": "Contains details of all products available in the store, including pricing, category, and status.",
+          "columns": [
+            {
+              "name": "ProductID",
+              "description": "Unique identifier for each product."
+            },
+            {
+              "name": "ProductName",
+              "description": "Official name of the product."
+            },
+            {
+              "name": "ProductCategory",
+              "description": "Category or classification of the product."
+            },
+            {
+              "name": "LaunchDate",
+              "description": "Date when the product was launched or made available for sale."
+            },
+            {
+              "name": "Price",
+              "description": "Current price of the product."
+            },
+            {
+              "name": "IsActive",
+              "description": "Indicates whether the product is currently available for sale."
+            },
+            {
+              "name": "Description",
+              "description": "Text description or additional information about the product."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

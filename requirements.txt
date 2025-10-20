@@ -1,0 +1,6 @@
+langchain_google_genai
+langchain_core
+pydantic
+structlog
+dotenv
+pymysql
